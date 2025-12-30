@@ -21,7 +21,7 @@ function HeroSection() {
           <div className="breifintro">
             <h3 className="quote">Navigating the depths of technology</h3>
             <p className="briefme">
-              A <span>CS student</span> focused on <span>frontend</span>{" "}
+              A <span>computer science student</span> focused on <span>frontend</span>{" "}
               development & <span>UI/UX</span> design, as well as exploring{" "}
               <span>backend</span> development.
             </p>
@@ -31,14 +31,14 @@ function HeroSection() {
           </div>
         </div>
         <div className="icons">
-          <a href="https://github.com/WinnieC180">
+          <a href="https://github.com/WinnieC180" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
               height="18"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="white"
+              stroke="currentColor"
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -50,14 +50,14 @@ function HeroSection() {
             Github
           </a>{" "}
           |
-          <a href="https://www.linkedin.com/in/winnie-chan-503804367/">
+          <a href="https://www.linkedin.com/in/winnie-chan-503804367/" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
               height="18"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="white"
+              stroke="currentColor"
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
