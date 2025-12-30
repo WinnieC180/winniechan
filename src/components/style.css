@@ -1,14 +1,19 @@
 * {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
+/* Navigation Bar */
 .navbar {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     position: relative; 
     height: 160px; 
+    z-index: 1;
 }
 
 .logo {
@@ -16,10 +21,11 @@
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
-    width: 160px;
-    height: 160px;
-    border-bottom-right-radius: 150px;
-    border-bottom-left-radius: 50px;
+    width: 80px;
+    height: 80px;
+    transform: translateX(-400%);
+    
+    border-radius: 30px;
 }
 
 .links {
@@ -28,7 +34,7 @@
     /* Moves the element backwards by 50% of its own width. */
     transform: translateX(-50%);
 
-    padding: 12px 36px;
+    padding: 12px 46px;
     background-color: #ffffff;
     border: 4px solid #C0C9DB;
     border-radius: 24px;
@@ -47,4 +53,126 @@
 .links ul li a {
     text-decoration: none;
     color: #121524;
+}
+
+/* Heroes Section */
+
+.heroesection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+.label {
+    width: 600px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    opacity: 0.9;
+    height: 450px;
+
+    border-radius: 50px;
+}
+
+.basedin {
+    color: #6A86B7;
+}
+
+.nametag {
+    padding: 0;
+    color: #121524;
+    font-size: 100px;
+    font-weight: 500;
+}
+
+.breifintro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.quote {
+    color:#a8a8a8;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.briefme {
+    text-align: center;
+    color: #121524;
+    width: 80%;
+}
+
+.briefme span, .basedin span {
+    color: #4ED3FF;
+}
+
+.more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2C3A5D;
+    border-radius: 10px;
+    border: 2px solid transparent;
+
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.more:hover {
+    background-color: #121524;
+    border: 2px solid #4ED3FF;
+
+    transform: scale(1.08);
+}
+
+.more a {
+    text-decoration: none;
+    color: #4ED3FF;
+}
+
+.icons {
+    margin-top: 10px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icons a {
+    display: inline-flex;
+    gap: 10px;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.fishes {
+    position: absolute;
+    top: 20px;
+    margin-right: 230px;
+    animation: float 7s ease-in-out infinite
+}
+
+.front {
+    top: 500px;
+    margin-right: 460px;
+    animation: float 5s ease-in-out infinite
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    } 50% {
+        transform: translateY(20px);
+    }
 }
