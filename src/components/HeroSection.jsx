@@ -7,11 +7,13 @@ import "./style.css";
 function HeroSection() {
   return (
     <div className="heroesection">
-      <img
-        src={backFishes}
-        alt="A digital drawing of some blue cartoon fishes"
-        className="fishes back"
-      />
+      <picture className="fishes back">
+        <img
+          src={backFishes}
+          alt="A digital drawing of some blue cartoon fishes"
+        />
+      </picture>
+
       <div className="label">
         <div className="description">
           <p className="basedin">
@@ -21,9 +23,9 @@ function HeroSection() {
           <div className="breifintro">
             <h3 className="quote">Navigating the depths of technology</h3>
             <p className="briefme">
-              A <span>computer science student</span> focused on <span>frontend</span>{" "}
-              development & <span>UI/UX</span> design, as well as exploring{" "}
-              <span>backend</span> development.
+              A <span>computer science student</span> focused on{" "}
+              <span>frontend</span> development & <span>UI/UX</span> design, as
+              well as exploring <span>backend</span> development.
             </p>
           </div>
           <div className="more">
@@ -50,7 +52,10 @@ function HeroSection() {
             Github
           </a>{" "}
           |
-          <a href="https://www.linkedin.com/in/winnie-chan-503804367/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/winnie-chan-503804367/"
+            target="_blank"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
