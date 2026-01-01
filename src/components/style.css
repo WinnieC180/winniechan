@@ -29,11 +29,9 @@
 
 .menu {
     opacity: 0;
+    pointer-events: none;
     background: none;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    color: #ffffff;
+    
     border: none;
     display: flex;
     justify-content: center;   
@@ -41,6 +39,35 @@
     
     padding: 22px;
     border-radius: 20px;
+    z-index: 20;
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #121524;
+    backdrop-filter: blur(10px);
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.mobileMenu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+}
+
+.mobileMenu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
 .links {
@@ -238,10 +265,18 @@
 @media (max-width: 600px) {
     .links {
         opacity: 0;
+        pointer-events: none;
     }
 
     .menu {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        pointer-events: auto;
+
+        color: #ffffff;
         opacity: 1;
+        cursor: pointer;
+        border: none;
     }
     
     .description {

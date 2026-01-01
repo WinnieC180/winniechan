@@ -6,7 +6,8 @@ import "./style.css";
 
 function HeroSection() {
   return (
-    <div className="heroesection">
+    <section>
+        <div className="heroesection">
       <picture className="fishes back">
         <img
           src={backFishes}
@@ -82,6 +83,7 @@ function HeroSection() {
         className="fishes front"
       />
     </div>
+    </section>
   );
 }
 

@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./style.css";
 import winLogo from "../assets/logo.svg";
-import {X, Menu} from "lucide-react"
+import { X, Menu } from "lucide-react";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const links = [
-    { name: "Work", href: "#work" },
+    { name: "Work", path: "/#work" },
     { name: "About", path: "/about" },
     { name: "Explorations", path: "/explorations" },
     { name: "Resume", path: "/about" },
@@ -25,16 +25,32 @@ function NavBar() {
         <ul>
           {links.map((link) => (
             <li key={link.name}>
-              {link.path ? (
-                <Link to={link.path}>{link.name}</Link>
-              ) : (
-                <a href={link.href}>{link.name}</a>
-              )}
+              <Link to={link.path}>{link.name}</Link>
             </li>
           ))}
         </ul>
       </div>
-      <button onClick = {(() => setIsMenuOpen((prev) => !prev))} className="menu">{isMenuOpen ? <X size={24}/> : <Menu size={24}/>}</button>
+      <button onClick={() => setIsMenuOpen((prev) => !prev)} className="menu">
+        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {/* mobile menu */}
+      {isMenuOpen && (
+        <div className="mobileMenu">
+          <ul>
+            {links.map((link) => (
+              <li key={link.name}>
+                <Link
+                  to={link.path}
+                  onClick={() => setIsMenuOpen((prev) => !prev)}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }
