@@ -16,7 +16,7 @@ function NavBar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">
+      <div className="logo centerFlex">
         <Link to="/">
           <img src={winLogo} alt="Winnie's Logo, Chinese character for win" />
         </Link>
@@ -30,13 +30,13 @@ function NavBar() {
           ))}
         </ul>
       </div>
-      <button onClick={() => setIsMenuOpen((prev) => !prev)} className="menu">
+      <button onClick={() => setIsMenuOpen((prev) => !prev)} className="menu centerFlex">
         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
       {/* mobile menu */}
       {isMenuOpen && (
-        <div className="mobileMenu">
+        <div className="mobileMenu centerFlex">
           <ul>
             {links.map((link, index) => (
               <li key={link.name} style={{ animationDelay: `${index * 0.1}s` }}>

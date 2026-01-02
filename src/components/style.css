@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+.centerFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Navigation Bar */
 .navbar {
     display: flex;
@@ -18,9 +24,6 @@
 }
 
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 8px;
     
@@ -31,11 +34,7 @@
     opacity: 0;
     pointer-events: none;
     background: none;
-    
     border: none;
-    display: flex;
-    justify-content: center;   
-    align-items: center;
     
     padding: 22px;
     border-radius: 20px;
@@ -98,11 +97,7 @@
 /* Heroes Section */
 
 .heroesection {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     padding: 40px;
 }
 
@@ -117,10 +112,7 @@
 }
 
 .description {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #ffffff;
     opacity: 0.9;
     min-height: 450px;
@@ -140,10 +132,7 @@
 }
 
 .breifintro {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
 }
 
@@ -253,15 +242,8 @@
 
     .mobileMenu {
         position: fixed;
-        top: 0;
-        left: 0;
+        inset: 0;
         background-color: #121524;
-        width: 100vw;
-        height: 100vh;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
         z-index: 10;
 
         animation: fadeIn 0.2s ease;

@@ -7,7 +7,7 @@ import "./style.css";
 function HeroSection() {
   return (
     <section>
-        <div className="heroesection">
+        <div className="heroesection centerFlex">
       <picture className="fishes back">
         <img
           src={backFishes}
@@ -16,12 +16,12 @@ function HeroSection() {
       </picture>
 
       <div className="label">
-        <div className="description">
+        <div className="description centerFlex">
           <p className="basedin">
             <span>●</span> CURRENTLY BASED IN: NEW YORK
           </p>
           <h1 className="nametag">Winnie</h1>
-          <div className="breifintro">
+          <div className="breifintro centerFlex">
             <h3 className="quote">Navigating the depths of technology</h3>
             <p className="briefme">
               A <span>computer science student</span> focused on{" "}
