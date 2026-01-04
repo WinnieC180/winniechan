@@ -51,8 +51,8 @@ function Projects() {
 
   return (
     <div className="projects">
-      {projects.map((project) => (
-        <div className={project.isComplete ? "project" : "project notDone"}>
+      {projects.map((project, index) => (
+        <div key={index} className={project.isComplete ? "project" : "project notDone"}>
           {project.isComplete ? (
             <div
               className="header"
@@ -81,8 +81,8 @@ function Projects() {
           </p>
 
           <div className="tools">
-            {project.tools.map((tool) => (
-              <p className="tool">{tool}</p>
+            {project.tools.map((tool, toolInd) => (
+              <p key={toolInd} className="tool">{tool}</p>
             ))}
           </div>
         </div>
