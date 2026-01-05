@@ -15,7 +15,10 @@ function Introduction() {
           every color imaginable. Markers, paints, clay, balloons… and
           eventually, those colors moved onto a screen. The digital world became
           my playground where I could blend art and programming into interactive
-          experiences. Now I build projects that connect both worlds, and to me,
+          experiences. 
+          <br />
+          <br />
+          Now I build projects that connect both worlds, and to me,
           that’s what make my experience truly colorful.
         </p>
       </div>
