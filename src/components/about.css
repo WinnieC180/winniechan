@@ -1,0 +1,7 @@
+.intro {
+    margin-top: 155px;
+    padding: 100px 50px;
+
+    flex-direction: column;
+    gap: 20px;
+}

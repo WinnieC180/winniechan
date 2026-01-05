@@ -330,6 +330,12 @@ html, body {
         gap: 50px !important; 
         width: clamp(50vw, 800px) !important;
     }
+
+    .footerBio {
+        flex-direction: column !important;
+        gap: 20px !important;
+        width: 90vw !important;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 900px) {
@@ -378,6 +384,11 @@ html, body {
         width: 100% !important;
         gap: 50px !important; 
         width: clamp(600px, 70vw, 900px) !important;
+    }
+
+    .footerBio {
+        flex-direction: column !important;
+        gap: 20px !important;
     }
 }
 
