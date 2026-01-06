@@ -85,11 +85,11 @@ html, body {
     transition: color 0.3s ease-in-out;
 }
 
-.links ul li a:hover {
+.links ul li a:hover,  .links ul li a.active{
     color: var(--clr-secondary-300);
 }
 
-.links ul li a::after {
+.links ul li a::after, .links ul li a.active::after {
     content: '';
     background-color: var(--clr-secondary-300);
     position: absolute;
@@ -103,7 +103,7 @@ html, body {
     transition: transform 0.3s ease-in-out; 
 }
 
-.links ul li a:hover::after {
+.links ul li a:hover::after,  .links ul li a.active::after {
     transform: scaleX(1);
 }
 

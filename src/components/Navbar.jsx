@@ -1,31 +1,43 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./style.css";
 import winLogo from "../assets/logo-light.svg";
+import resume from "../assets/ResumeWinnieChan.pdf"
 import { X, Menu } from "lucide-react";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeTab, setActiveTab] = useState("");
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+      setIsScrolled(window.scrollY > 50);
+
+      if (location.pathname === "/") {
+        const workSection = document.getElementById("work");
+        if (workSection) {
+          const rect = workSection.getBoundingClientRect();
+          // If work section is in view
+          if (rect.top <= 150 && rect.bottom >= 150) {
+            setActiveTab("work");
+          } else {
+            setActiveTab("");
+          }
+        }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location]);
 
   const links = [
-    { name: "Work", path: "/#work" },
-    { name: "About", path: "/about" },
-    { name: "Explorations", path: "/explorations" },
-    { name: "Resume", path: "/about" },
+    { name: "Work", path: "/#work", type: "anchor" },
+    { name: "About", path: "/about", type: "route" },
+    { name: "Explorations", path: "/explorations", type: "route" },
+    { name: "Resume", path: resume, type: "file" },
   ];
 
   return (
@@ -39,10 +51,28 @@ function NavBar() {
         <ul>
           {links.map((link) => (
             <li key={link.name}>
-              {link.path.startsWith("/#") ? (
-                <a href={link.path}>{link.name}</a>
+              {link.type === "anchor" ? (
+                <a
+                  href={link.path}
+                  className={
+                    activeTab === "work" && location.pathname === "/"
+                      ? "active"
+                      : ""
+                  }
+                >
+                  {link.name}
+                </a>
+              ) : link.type === "file" ? (
+                <a href={link.path} target="_blank">
+                  {link.name}
+                </a>
               ) : (
-                <Link to={link.path}>{link.name}</Link>
+                <NavLink
+                  to={link.path}
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  {link.name}
+                </NavLink>
               )}
             </li>
           ))}
