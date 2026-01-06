@@ -1,0 +1,90 @@
+.explorations-page {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+.portrait {
+    margin-bottom: auto;
+    padding: 0 0 15px 15px;
+    width: 90%;
+    overflow: hidden;
+}
+
+.hero-container {
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+
+.portrait img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portrait img:hover {
+    transform: scale(1.05);
+}
+
+.viewport {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+}
+
+.viewport:active {
+    cursor: grabbing;
+}
+
+.canvas {
+    width: 200vw;
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.scatter-card {
+    position: absolute;
+    width: 280px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px hsl(from var(--clr-primary-800) h s l / 0.6);
+    cursor: grab;
+    color: var(--clr-primary-800);
+    font-size: 0.8rem;
+}
+
+.scatter-card img {
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.scatter-card:active {
+    cursor: grab;
+}
+
+.reset-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    padding: 18px 30px;
+    border: 2px solid var(--clr-primary-650);
+    border-radius: 10px;
+
+    box-shadow: 0 0 50px hsl(from var(--clr-secondary-300) h s l / 0.3);
+
+    background-color: var(--clr-primary-400);
+    color: var(--clr-primary-650);
+    font-weight: 600;
+
+    z-index: 50;
+    cursor: pointer;
+}
