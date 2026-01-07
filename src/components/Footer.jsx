@@ -47,6 +47,7 @@ function Footer() {
                 textDecoration: "none",
                 color: "var(--clr-primary-400)",
               }}
+              target="_blank"
             >
               <p>GitHub</p>
             </a>
@@ -59,6 +60,7 @@ function Footer() {
                 textDecoration: "none",
                 color: "var(--clr-primary-400)",
               }}
+              target="_blank"
             >
               <p>LinkedIn</p>
             </a>
