@@ -71,14 +71,14 @@ function Experience() {
                     className="toolkit"
                     style={{ display: "flex", flexDirection: "column", gap: "30px" }}
                 >
-                    <div className="" style={{ display: "flex", gap: "10px" }}>
+                    <div style={{ display: "flex", gap: "10px" }}>
                         <img src={Anchor} alt="An icon of a blue anchor" />
                         <h2>
                             <em>Technical Toolkit</em>
                         </h2>
                     </div>
 
-                    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                    <div className="myTools" style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                         <p style={{ color: "var(--clr-secondary-300)" }}>DEV TOOLS</p>
 
                         <div className="devTools">
@@ -90,7 +90,7 @@ function Experience() {
                         </div>
                     </div>
 
-                    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                    <div className="myTools" style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                         <p style={{ color: "var(--clr-secondary-300)" }}>DESIGN TOOLS</p>
 
                         <div className="designTools">
@@ -103,7 +103,7 @@ function Experience() {
                     </div>
                 </div>
 
-                <div className="education" style={{ display: "flex", flexDirection: "column", gap: "30px"}}>
+                <div className="education" style={{ display: "flex", flexDirection: "column", gap: "30px",  width: "380px"}}>
                     <div>
                         <h2>
                             <em>Education</em>
@@ -111,7 +111,7 @@ function Experience() {
                     </div>
 
                     {educations.map((education, eduIndex) => (
-                        <div key={eduIndex}>
+                        <div className="school" key={eduIndex}>
                             <p><span style={{color: "var(--clr-secondary-300)"}}>✦</span> {education.school}</p>
                             <p style={{color: "var(--clr-neutral-200)"}}>{education.major}</p>
                             <p style={{color: "var(--clr-secondary-300)"}}>Class of{education.gradClass}</p>
@@ -121,7 +121,7 @@ function Experience() {
             </div>
 
             <div className= "myExperiences">
-                <div style={{ display: "flex", flexDirection: "column", gap: "30px", width: "380px" }}>
+                <div className="experiences" style={{ display: "flex", flexDirection: "column", gap: "30px", width: "380px" }}>
                     <div>
                         <h2>
                             <em>Experiences</em>

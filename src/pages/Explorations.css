@@ -90,3 +90,13 @@
     z-index: 50;
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+    .scatter-card {
+        width: 60vw;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+}
