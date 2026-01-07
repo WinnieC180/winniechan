@@ -104,7 +104,7 @@ function Projects() {
             src={WhirlPool}
             alt="A whirlpool of fish"
             style={{
-              width: "80%",
+              width: "65%",
               background:
                 "radial-gradient(circle, var(--clr-primary-600) 0%, hsl( from var(--clr-primary-600) h s l / 0) 60% )",
             }}

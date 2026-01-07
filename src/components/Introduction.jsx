@@ -10,6 +10,7 @@ function Introduction() {
         <p style={{maxWidth: "500px", width: "100%"}}>
           I’m Winnie, a sophomore studying Computer
           Science, and pursuing minors in Game Design & Information Science. 
+          Currently grinding to be fullstack!
           <br />
           <br />
           My love for creativity started long before code, back when I collected
