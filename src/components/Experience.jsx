@@ -58,7 +58,7 @@ function Experience() {
   ]
 
   return (
-    <div style={{display: "flex", flexDirection: "column", marginTop: "110px"}}>
+    <div className="kit" style={{display: "flex", flexDirection: "column", marginTop: "110px"}}>
         <div className="centerFlex">
             <img src={Line} alt="A short line" style={{width: "28vw"}}/>
             <p style={{fontSize: "clamp(12px, 1.5vw + 0.5rem, 20px)"}}>EXPERIENCE LOG</p>
