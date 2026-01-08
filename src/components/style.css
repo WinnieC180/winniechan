@@ -129,10 +129,10 @@ html, body {
 .description {
     flex-direction: column;
     background-color: var(--clr-neutral-100);
-    opacity: 0.9;
+    opacity: 0.85;
     min-height: 450px;
 
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 .basedin {
