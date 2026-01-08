@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/winniechan">
         <ScrollToTop />
         <Routes>
           <Route index element={<Home />} />
