@@ -11,6 +11,7 @@ function Experience() {
     "CSS",
     "JavaScript",
     "React",
+    "Node.js",
     "GitHub",
   ];
 
