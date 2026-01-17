@@ -14,7 +14,7 @@ function ProjectInfo() {
       <NavBar />
       <div className="project-container">
         <aside className="sidebar">
-          <Link to="/" className="back-link">
+          <Link to="/" className="back-link" style={{backgroundColor: "var(--clr-primary-500)", padding: "10px", borderRadius: "10px"}}>
             ← Home
           </Link>
           <nav>
@@ -26,7 +26,7 @@ function ProjectInfo() {
           </nav>
         </aside>
 
-        <main className="content-area">
+        <main className="content-area centerFlex">
           <img
             className="content-image"
             src={project.image}
@@ -35,20 +35,23 @@ function ProjectInfo() {
           <h1>{project.subTitle}</h1>
 
           {project.sections.map((section) => (
-            <div className="section-body">
+            <div className="section-body centerFlex">
               {Array.isArray(section.content) ? (
                 <ul className="overview-list">
                   {section.content.map((item, i) => {
                     const [label, value] = Object.entries(item)[0];
                     return (
-                      <li key={i}>
-                        <strong>{label}:</strong> {value}
+                      <li key={i} className="centerFlex" style={{ gap: "10px" }}>
+                        <strong style={{color: "var(--clr-secondary-300)"}}>{label} <br /></strong> <span> {value} </span>
                       </li>
                     );
                   })}
                 </ul>
               ) : (
-                <p>{section.content}</p>
+                <div style={{gap: "30px", display: "flex", flexDirection: "column"}}>
+                    <p style={{color: "var(--clr-secondary-300)"}}>{section.label}</p>
+                    <p>{section.content}</p>
+                </div>
               )}
             </div>
           ))}

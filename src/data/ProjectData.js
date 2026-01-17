@@ -23,13 +23,13 @@ export const ProjectData = [
         id: "description",
         label: "Description",
         content:
-          "Oh My Camel is a game created for the CS 3110 (Data Structures and Functional Programming) course. A camel pet simulator game with turn-based logic. The player starts with a petcamel with happiness, hunger, and hygiene statistics set at a maximum value of 100 and a certainamount of coins. The player can choose what to do in each turn/day: play with a pet, feed a pet, clean a pet, or play mini games.",
+          "Oh My Camel is a game created for the CS 3110 (Data Structures and Functional Programming) course. A camel pet simulator game with turn-based logic. The player starts with a petcamel with happiness, hunger, and hygiene statistics set at a maximum value of 100 and a certainamount of coins. \n\nThe player can choose what to do in each turn/day: play with a pet, feed a pet, clean a pet, or play mini games.",
       },
       {
         id: "reflection",
         label: "Reflection",
         content:
-          "Overall, working on Oh My Camel was an incredibly fun and rewarding experience. It was a fast-paced, highly collaborative coding project that grew to over 1,600 lines of code and required constant iteration and refinement of our ideas. As a team, we explored multiple concepts, evaluating what was both feasible and impactful, in order to meet the project requirements and complete it within the allotted time. Through this process, I learned a great deal about collaboration and the realities of building a project as a group. Balancing creativity with practicality. I also gained valuable experience in prioritizing features, understanding when to refine ideas, and recognizing which features to set aside to keep the project reasonable, functional, and enjoyable for everyone.",
+          "Overall, working on Oh My Camel was an incredibly fun and rewarding experience. It was a fast-paced, highly collaborative coding project that grew to over 1,600 lines of code and required constant iteration and refinement of our ideas. As a team, we explored multiple concepts, evaluating what was both feasible and impactful, in order to meet the project requirements and complete it within the allotted time. \n\n Through this process, I learned a great deal about collaboration and the realities of building a project as a group. Balancing creativity with practicality. I also gained valuable experience in prioritizing features, understanding when to refine ideas, and recognizing which features to set aside to keep the project reasonable, functional, and enjoyable for everyone.",
       },
     ],
   },
