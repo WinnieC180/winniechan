@@ -1,0 +1,34 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.project-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 120px auto;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-area {
+  flex: 1;
+  padding: 40px;
+}
+
+.content-image {
+  border-radius: 20px;
+}
+
+.project-section {
+  min-height: 60vh;
+  margin-bottom: 100px;
+  padding-top: 50px;
+}

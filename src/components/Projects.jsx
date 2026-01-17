@@ -1,10 +1,11 @@
 import "./projects.css";
+import { Link } from "react-router-dom";
 import WhirlPool from "../assets/whirlPool.svg";
-import OhMyCamel from "../imgProjects/Oh-My-Camel.svg"
-import Quack from "../imgProjects/Quack-A-Goose.svg"
-import StudyBuddy from "../imgProjects/StudyBuddy.svg"
-import CreatorCuts from "../imgProjects/CreatorsCuts.svg"
-import SUSB from "../imgProjects/SUSB.svg"
+import OhMyCamel from "../imgProjects/Oh-My-Camel.svg";
+import Quack from "../imgProjects/Quack-A-Goose.svg";
+import StudyBuddy from "../imgProjects/StudyBuddy.svg";
+import CreatorCuts from "../imgProjects/CreatorsCuts.svg";
+import SUSB from "../imgProjects/SUSB.svg";
 
 function Projects() {
   const projects = [
@@ -20,7 +21,7 @@ function Projects() {
       isComplete: true,
     },
     {
-      id: "qu-wack-a-mole",
+      id: "quack-a-goose",
       title: "A mole, a goose, or...?",
       subTitle: "Qu-wack a Mole",
       description:
@@ -68,47 +69,57 @@ function Projects() {
   return (
     <div className="projects">
       {projects.map((project, index) => (
-        <div
+        <Link
+          to={project.isComplete ? `/${project.id}` : "#"}
           key={index}
-          className={project.isComplete ? "project" : "project notDone"}
+          className="project-card-link"
+          style={{textDecoration: "none", color: "var(--clr-neutral-100)"}}
         >
-          {project.isComplete ? (
-            <div
-              className="header"
-              style={{ color: "var(--clr-secondary-300)" }}
+          <div
+            key={index}
+            className={project.isComplete ? "project" : "project notDone"}
+          >
+            {project.isComplete ? (
+              <div
+                className="header"
+                style={{ color: "var(--clr-secondary-300)" }}
+              >
+                <p>MISSON COMPLETE</p>
+                <p>~ {project.timeSpent}</p>
+              </div>
+            ) : (
+              <div className="header" style={{ color: "hsl(352 100% 65%)" }}>
+                <p>CURRENTLY EXPLORING</p>
+                <p>......</p>
+              </div>
+            )}
+
+            <div className="image">
+              <img src={project.image} alt="" />
+            </div>
+
+            <div className="name" style={{ display: "flex" }}>
+              <h2 className={project.isComplete ? "title" : "title not"}>
+                {project.title} <span>✦ {project.subTitle}</span>
+              </h2>
+            </div>
+
+            <p
+              className="projectBio"
+              style={{ color: "var(--clr-primary-500)" }}
             >
-              <p>MISSON COMPLETE</p>
-              <p>~ {project.timeSpent}</p>
+              {project.description}
+            </p>
+
+            <div className="tools">
+              {project.tools.map((tool, toolInd) => (
+                <p key={toolInd} className="tool">
+                  {tool}
+                </p>
+              ))}
             </div>
-          ) : (
-            <div className="header" style={{ color: "hsl(352 100% 65%)" }}>
-              <p>CURRENTLY EXPLORING</p>
-              <p>......</p>
-            </div>
-          )}
-
-          <div className="image">
-            <img src={project.image} alt=""/>
           </div>
-
-          <div className="name" style={{ display: "flex" }}>
-            <h2 className={project.isComplete ? "title" : "title not"}>
-              {project.title} <span>✦ {project.subTitle}</span>
-            </h2>
-          </div>
-
-          <p className="projectBio" style={{ color: "var(--clr-primary-500)" }}>
-            {project.description}
-          </p>
-
-          <div className="tools">
-            {project.tools.map((tool, toolInd) => (
-              <p key={toolInd} className="tool">
-                {tool}
-              </p>
-            ))}
-          </div>
-        </div>
+        </Link>
       ))}
       {projects.length % 2 == 0 ? (
         <div></div>
