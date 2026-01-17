@@ -78,6 +78,7 @@ function Projects() {
           <div
             key={index}
             className={project.isComplete ? "project" : "project notDone"}
+            style={project.isComplete ? {} : {cursor: "default"}}
           >
             {project.isComplete ? (
               <div
