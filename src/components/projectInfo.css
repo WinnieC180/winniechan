@@ -11,9 +11,11 @@ html {
   position: fixed;
   top: 0;
 
-  width: 20vw;
+  width: 22vw;
   height: 100vh;
   padding: 180px 40px 40px 150px;
+
+  box-shadow: 0 0 30px hsl(from var(--clr-primary-800) h s l / 0.5);
 }
 
 .sidebar nav {
