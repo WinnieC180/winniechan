@@ -30,10 +30,10 @@ export const ProjectData = [
         label: "Play Throughs",
         subLabel: "Minigames that could earn you coins!",
         videos: [
-            {name: "Jumping Game", link: "./videos/Jumping.mp4"},
-            {name: "Memory Game", link: "./videos/Memorygame.mp4"},
-            {name: "Number Game & Inventory", link: "./videos/numberGame.mp4"},
-            {name: "Dune!", link: "./videos/Dune!.mp4"}
+          { name: "Jumping Game", link: "./videos/Jumping.mp4" },
+          { name: "Memory Game", link: "./videos/Memorygame.mp4" },
+          { name: "Number Game & Inventory", link: "./videos/numberGame.mp4" },
+          { name: "Dune!", link: "./videos/Dune!.mp4" },
         ],
       },
       {
@@ -66,6 +66,15 @@ export const ProjectData = [
           "Quack a Goose is a fun, fast-paced game inspired by Whack-a-Mole, where players try to quack geese as they pop up on the screen. Within a 30-second time limit, players test their reaction speed by hitting as many geese as possible, with the challenge increasing as more geese spawn over time. But there’s a twist! The game features an alternate mode called “People,” where—thanks to volunteers from our AP Computer Science A class—photos of fellow CS students and even our teacher take on the role of the geese, adding a personalized and humorous element to the gameplay.",
       },
       {
+        id: "play-through",
+        label: "Play Throughs",
+        subLabel: "",
+        videos: [
+          { name: "Geese Mode", link: "./videos/Quack-a-Goose.mp4" },
+          { name: "People Mode", link: "./videos/peopleMode.mp4" },
+        ],
+      },
+      {
         id: "reflection",
         label: "Reflection",
         content:
@@ -82,11 +91,27 @@ export const ProjectData = [
         id: "overview",
         label: "Overview",
         content: [
-          { Team: "2 frontend developers \n2 backend developers \n1 UI/UX designer" },
+          {
+            Team: "2 frontend developers \n2 backend developers \n1 UI/UX designer",
+          },
           { Role: "UI/UX Designer" },
           { Timeline: "Fall 2025 \n(1 week)" },
           { Tools: "Figma" },
         ],
+      },
+      {
+        id: "context",
+        label: "Context",
+        content:
+          "Study Buddy is a mobile application created for Cornell University students to help them find compatible study partners based on shared study habits, schedules, and preferences. By reducing the friction of coordinating study sessions, Study Buddy aims to ease academic stress during high-pressure periods such as prelims and finals, while fostering accountability, collaboration, and community among students.",
+      },
+      {
+        id: "problem-space",
+        label: "Problem Space",
+        content:
+          "Students often experience intense academic pressure, especially during prelim and final seasons. While studying with others can improve motivation and understanding, finding a compatible study partner is challenging. Students struggle with: \n\n• Mismatched study styles (quiet vs. collaborative)\n• Scheduling conflicts\n• Awkward or time-consuming coordination through group chats\n• Lack of a centralized platform for finding study companions\n\n",
+        peopleProblem:
+          "How might we make it easier for students to find the right people to study with during high-stress academic periods?",
       },
     ],
   },

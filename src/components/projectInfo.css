@@ -65,6 +65,7 @@ html {
 
 .section-body {
   margin-bottom: 70px;
+  max-width: 50vw;
 }
 
 .section-body p {
@@ -79,14 +80,14 @@ html {
 .video-grid {
   display: grid;
   grid-template-columns: 1fr 1fr; 
-  gap: 40px; 
+  gap: 10px; 
   width: 100%;
 }
 
 .video-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .video-card video {

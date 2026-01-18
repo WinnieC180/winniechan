@@ -110,6 +110,24 @@ function ProjectInfo() {
                     {section.label}
                   </p>
                   <p>{section.content}</p>
+                  {section.peopleProblem && (
+                    <div
+                      className="people-problem-box centerFlex"
+                      style={{ gap: "20px" }}
+                    >
+                      <div
+                        className="centerFlex"
+                        style={{
+                          backgroundColor: "var(--clr-secondary-300)",
+                          width: "10px",
+                          height: "100px",
+                        }}
+                      ></div>
+                      <p className="problem-text">
+                        <b>{section.peopleProblem}</b>
+                      </p>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
