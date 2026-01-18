@@ -118,7 +118,26 @@ export const ProjectData = [
         label: "User Personas",
         content:
           "As this was a fast-paced, one-week project, there was limited time to conduct in-depth user research. To guide our design decisions, we created two representative personas based on common student experiences at Cornell, informal conversations with peers, and our own academic experiences. These personas helped us stay user-focused while prioritizing core needs and constraints.",
-        pictures: ["./photos/Persona1-studybuddy.svg", "./photos/Persona2-studybuddy.svg"],
+        pictures: [
+          "./photos/Persona1-studybuddy.svg",
+          "./photos/Persona2-studybuddy.svg",
+        ],
+      },
+      {
+        id: "ideation",
+        label: "Ideation",
+        content: [
+          {
+            type: "text",
+            value:
+              "I created low-fidelity sketches to quickly visualize and refine the core experience of Study Buddy, centering on swipe-based study partner matching, calendar-based planning, and group messaging to make organizing study sessions effortless.",
+          },
+          { type: "image", value: "./photos/LowFi-studdybuddy.png" },
+          {
+            type: "text",
+            value: "As a developer myself, I was mindful of technical feasibility. After discussing constraints with the development team, we determined that within the limited timeframe we could realistically implement the core features, including swipe-based profile matching, group chat, and study partner matches.",
+          },
+        ],
       },
     ],
   },

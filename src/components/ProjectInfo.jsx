@@ -70,7 +70,7 @@ function ProjectInfo() {
 
           {project.sections.map((section, id) => (
             <div className="section-body centerFlex" key={id} id={section.id}>
-              {Array.isArray(section.content) ? (
+              {Array.isArray(section.content) && section.id === "overview" ? (
                 <ul className="overview-list">
                   {section.content.map((item, i) => {
                     const [label, value] = Object.entries(item)[0];
@@ -82,7 +82,7 @@ function ProjectInfo() {
                       >
                         <strong style={{ color: "var(--clr-secondary-300)" }}>
                           {label} <br />
-                        </strong>{" "}
+                        </strong>
                         <span> {value} </span>
                       </li>
                     );
@@ -99,7 +99,6 @@ function ProjectInfo() {
                     {section.label}
                   </p>
                   <p>{section.subLabel}</p>
-
                   <div className="video-section">
                     <div className="video-grid">
                       {section.videos.map((vid, index) => (
@@ -118,23 +117,48 @@ function ProjectInfo() {
                     gap: "20px",
                     display: "flex",
                     flexDirection: "column",
+                    width: "100%",
                   }}
                 >
                   <p style={{ color: "var(--clr-secondary-300)" }}>
                     {section.label}
                   </p>
-                  <p>{section.content}</p>
+
+                  {Array.isArray(section.content) ? (
+                    section.content.map((item, idx) => {
+                      if (item.type === "text") {
+                        return <p key={idx}>{item.value}</p>;
+                      }
+                      if (item.type === "image") {
+                        return (
+                          <img
+                            key={idx}
+                            src={item.value}
+                            alt="Process Step"
+                            className="caseStudyImage"
+                            style={{
+                              width: "100%",
+                              borderRadius: "15px",
+                              margin: "10px 0",
+                            }}
+                          />
+                        );
+                      }
+                      return null;
+                    })
+                  ) : (
+                    <p>{section.content}</p>
+                  )}
                   {section.peopleProblem && (
                     <div
                       className="people-problem-box centerFlex"
                       style={{ gap: "20px" }}
                     >
                       <div
-                        className="centerFlex"
                         style={{
                           backgroundColor: "var(--clr-secondary-300)",
                           width: "10px",
-                          height: "100px",
+                          alignSelf: "stretch",
                         }}
                       ></div>
                       <p className="problem-text">
@@ -142,15 +166,18 @@ function ProjectInfo() {
                       </p>
                     </div>
                   )}
-                  {section.pictures && (
-                    <div className="centerFlex" style={{flexDirection: "column", gap: "30px"}}>
-                      {section.pictures.map((personaImg, index) => (
+
+                  {section.pictures && !Array.isArray(section.content) && (
+                    <div
+                      className="centerFlex"
+                      style={{ flexDirection: "column", gap: "30px" }}
+                    >
+                      {section.pictures.map((pic, index) => (
                         <img
                           key={index}
-                          src={personaImg}
-                          alt={`User Persona ${index + 1}`}
+                          src={pic}
                           className="caseStudyImage"
-                          style={{maxWidth: "45vw", marginTop: "20px"}}
+                          style={{ maxWidth: "45vw" }}
                         />
                       ))}
                     </div>
