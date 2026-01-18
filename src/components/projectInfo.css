@@ -66,6 +66,8 @@ html {
 .section-body {
   margin-bottom: 70px;
   max-width: 50vw;
+
+  scroll-margin-top: 200px;
 }
 
 .section-body p {

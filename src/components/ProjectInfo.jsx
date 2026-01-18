@@ -1,4 +1,5 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { ProjectData } from "../data/ProjectData.js";
 import "./projectInfo.css";
 import NavBar from "./Navbar.jsx";
@@ -6,7 +7,20 @@ import { ScrollVideo } from "./ScrollVideo.jsx";
 
 function ProjectInfo() {
   const { projectId } = useParams();
+  const { hash } = useLocation();
   const project = ProjectData.find((p) => p.id === projectId);
+
+  useEffect(() => {
+    if (hash) {
+      // Remove the '#' from the start (e.g., '#overview' -> 'overview')
+      const targetId = hash.replace("#", "");
+      const element = document.getElementById(targetId);
+      
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
 
   if (!project) return <div>Project not found</div>;
 
@@ -28,7 +42,7 @@ function ProjectInfo() {
           </Link>
           <nav>
             {project.sections.map((section) => (
-              <a key={section.id} href={`#${section.id}`}>
+              <a key={section.id} href={`#/${project.id}#${section.id}`}>
                 {section.label}
               </a>
             ))}
@@ -54,8 +68,8 @@ function ProjectInfo() {
             <h1>{project.subTitle}</h1>
           </div>
 
-          {project.sections.map((section) => (
-            <div className="section-body centerFlex">
+          {project.sections.map((section, id) => (
+            <div className="section-body centerFlex" key={id} id={section.id}>
               {Array.isArray(section.content) ? (
                 <ul className="overview-list">
                   {section.content.map((item, i) => {
