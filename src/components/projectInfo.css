@@ -104,3 +104,25 @@ html {
   font-size: 1rem;
   font-weight: 500;
 }
+
+.preview-layout .video-grid {
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 20px;
+  width: 50vw;
+}
+
+.preview-layout .video-card video {
+  border-radius: 2.5vw; 
+  transition: transform 0.3s ease;
+}
+
+.preview-layout .video-card video:hover {
+  transform: scale(1.02); 
+}
+
+.preview-layout .video-name {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  color: var(--clr-secondary-300);
+}

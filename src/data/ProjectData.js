@@ -135,7 +135,8 @@ export const ProjectData = [
           { type: "image", value: "./photos/LowFi-studdybuddy.png" },
           {
             type: "text",
-            value: "As a developer myself, I was mindful of technical feasibility. After discussing constraints with the development team, we determined that within the limited timeframe we could realistically implement the core features, including swipe-based profile matching, group chat, and study partner matches.",
+            value:
+              "As a developer myself, I was mindful of technical feasibility. After discussing constraints with the development team, we determined that within the limited timeframe we could realistically implement the core features, including swipe-based profile matching, group chat, and study partner matches.",
           },
         ],
       },
@@ -155,6 +156,30 @@ export const ProjectData = [
           { Timeline: "Fall 2025 \n(3 months)" },
           { Tools: "Figma" },
         ],
+      },
+      {
+        id: "context",
+        label: "Context",
+        content:
+          "Creator’s Cuts is a YouTube feature concept that allows users to organize videos and Shorts into custom, color-coded categories they create themselves. By intentionally categorizing content, users can influence their recommendation feed, enabling YouTube to surface videos that better match their interests and viewing intent while reducing irrelevant recommendations.",
+      },
+      {
+        id: "case-preview",
+        label: "Preview",
+        subLabel: "",
+        videos: [
+          { name: "Entry points", link: "./videos/entry-point.mp4" },
+          { name: "Creating a new cut", link: "./videos/creating-cut.mp4" },
+          { name: "Editing & Deleting existing cuts", link: "./videos/edit-delete-cut.mp4" },
+        ],
+      },
+      {
+        id: "problem-space",
+        label: "Problem Space",
+        content:
+          "YouTube allows users to find specific content they are searching for during a break, but it is difficult to find that content because… \n\n1. Users prefer quick, effortless discovery instead of actively searching for videos\n2. Users often get distracted by other visually appealing content, straying away from original goal",
+        peopleProblem:
+          "How might we enable users to effortlessly find specific content on YouTube during breaks while minimizing distractions from visually appealing but irrelevant videos?",
       },
     ],
   },

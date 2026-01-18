@@ -99,7 +99,7 @@ function ProjectInfo() {
                     {section.label}
                   </p>
                   <p>{section.subLabel}</p>
-                  <div className="video-section">
+                  <div className={`video-section ${section.id === "case-preview" ? "preview-layout" : ""}`}>
                     <div className="video-grid">
                       {section.videos.map((vid, index) => (
                         <ScrollVideo
